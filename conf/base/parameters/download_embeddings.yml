@@ -1,0 +1,14 @@
+# This is a boilerplate parameters config generated for pipeline 'download_embeddings'
+# using Kedro 0.17.7.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.17.7/04_kedro_project_setup/02_configuration.html#parameters
+
+train_set_size: 0
+validation_set_size: 8000
+test_set_size: 0
+download_batch_size: 30
+
+train: 'train'
+val: 'val'
+test: 'test'

@@ -1,0 +1,45 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+metadata:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/music_metadata.csv
+
+train_audio:
+    type: PartitionedDataSet
+    path: /data-gpu/audio_train
+    dataset: thesis_project.datasets.EmbeddingDataSet
+    filename_suffix: .pt
+
+train_video:
+    type: PartitionedDataSet
+    path: /data-gpu/video_train
+    dataset: thesis_project.datasets.EmbeddingDataSet
+    filename_suffix: .pt
+    
+val_audio:
+    type: PartitionedDataSet
+    path: /data-gpu/audio_val
+    dataset: thesis_project.datasets.EmbeddingDataSet
+    filename_suffix: .pt
+
+val_video:
+    type: PartitionedDataSet
+    path: /data-gpu/video_val
+    dataset: thesis_project.datasets.EmbeddingDataSet
+    filename_suffix: .pt
+
+test_audio:
+    type: PartitionedDataSet
+    path: /data-gpu/audio_test 
+    dataset: thesis_project.datasets.EmbeddingDataSet
+    filename_suffix: .pt
+
+test_video:
+    type: PartitionedDataSet
+    path: /data-gpu/video_test
+    dataset: thesis_project.datasets.EmbeddingDataSet
+    filename_suffix: .pt
+    

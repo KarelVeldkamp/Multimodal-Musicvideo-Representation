@@ -1,0 +1,20 @@
+# This is a boilerplate parameters config generated for pipeline 'genre_classification'
+# using Kedro 0.17.7.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.17.7/04_kedro_project_setup/02_configuration.html#parameters
+
+opt_genre:
+  max_epochs: 200
+  train_size: 360000
+  val_size: 60000
+  test_size: 60000
+  batch_size: 50
+  val_batch_size: 50
+  test_batch_size: 50
+  max_increases: 4
+  learning_rate: .005
+  logger_name: 'genre_2plus1d'
+
+modality: 'video'
+input_size: 512                # 1506 for audio

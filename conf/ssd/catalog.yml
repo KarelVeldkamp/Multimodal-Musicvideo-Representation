@@ -1,0 +1,69 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+metadata:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/music_metadata.csv
+
+train_audio:
+    type: PartitionedDataSet
+    path: /data-gpu/train
+    dataset: thesis_project.datasets.AudioDataSet
+    filename_suffix: .wav
+
+train_video:
+    type: PartitionedDataSet
+    path: /data-gpu/train
+    dataset: thesis_project.datasets.VideoDataSet
+    filename_suffix: .mp4
+
+validation_audio:
+    type: PartitionedDataSet
+    path: /data-gpu/validation
+    dataset: thesis_project.datasets.AudioDataSet
+    filename_suffix: .wav
+
+validation_video:
+    type: PartitionedDataSet
+    path: /data-gpu/validation
+    dataset: thesis_project.datasets.VideoDataSet
+    filename_suffix: .mp4
+
+test_audio:
+    type: PartitionedDataSet
+    path: /data-gpu/test
+    dataset: thesis_project.datasets.AudioDataSet
+    filename_suffix: .wav
+
+test_video:
+    type: PartitionedDataSet
+    path: /data-gpu/test
+    dataset: thesis_project.datasets.VideoDataSet
+    filename_suffix: .mp4
+
+
+#audio_files:
+#  type: PartitionedDataSet
+#  dataset: thesis_project.datasets.AudioDataSet
+#  path: /Users/xite/Documents/thesis/videos/audio
+#  filename_suffix: .wav
+
+#video_files:
+#  type: PartitionedDataSet
+#  dataset: thesis_project.datasets.VideoDataSet
+#  path: /Users/xite/Documents/thesis/videos/mp4
+#  filename_suffix: .mp4
+
+#kinetic_files:
+#  type: PartitionedDataSet
+#  dataset: thesis_project.datasets.VideoDataSet
+#  path: /Users/xite/Documents/thesis/kinetics400
+#  filename_suffix: .mp4
+
+#audio_files:
+#    type: PartitionedDataSet
+#    dataset: thesis_project.datasets.AudioDataSetBucket
+#    path: gs://thesis_video_files/audio
+#    filename_suffix: .wav

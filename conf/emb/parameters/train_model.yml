@@ -1,0 +1,32 @@
+# This is a boilerplate parameters config generated for pipeline 'train_model'
+# using Kedro 0.17.7.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.17.7/04_kedro_project_setup/02_configuration.html#parameters
+
+
+opt:
+  'val_step': 5                                 # number of epochs between validations steps
+  'measure': 'cosine'                           # similarity metric to use
+  'logger_name': 'test'                         # name for the logger
+  'filename': 'one_ph_es3'                      # filename for saving the trained model
+  'log_step': 10                                 # number of batches between logging
+  'num_epochs': 1000                            # number of epochs
+  'reset_train': True                           # whether to reset to training mode each epoch
+  'finetune': False                             # whether to finetune all layers of the network
+  'learning_rate': .01                          # learning rate                       
+  'audio_layer_sizes': [512, 512]     # layer sizes of audio encoder, last one being the embedding size
+  'video_layer_sizes': [512, 1506]     # same but for video, note that the embedding size needs to be equal
+  'normalise': True                             # whether to normalise the embeddings
+  'use_embeddings': True,
+  'max_increases': 2                        # max number of epochs the loss can increase before early stopping
+
+
+batch_size: 1000                             # batch size
+val_batch_size: 1000
+train_size: 65000
+val_size: 9000
+
+train: 'train'
+val: 'val'
+test: 'test'
