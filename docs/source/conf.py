@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-# thesis_project documentation build
+# ecir_project documentation build
 # configuration file, created by sphinx-quickstart.
 #
 # This file is execfile()d with the current directory set to its
@@ -26,7 +26,7 @@ from thesis_project import __version__ as release
 
 # -- Project information -----------------------------------------------------
 
-project = "thesis_project"
+project = "ecir_project"
 author = "Kedro"
 
 # The short X.Y version.
@@ -148,8 +148,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "thesis_project.tex",
-        "thesis_project Documentation",
+        "ecir_project.tex",
+        "ecir_project Documentation",
         "Kedro",
         "manual",
     )
@@ -162,8 +162,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "thesis_project",
-        "thesis_project Documentation",
+        "ecir_project",
+        "ecir_project Documentation",
         [author],
         1,
     )
@@ -177,11 +177,11 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "thesis_project",
-        "thesis_project Documentation",
+        "ecir_project",
+        "ecir_project Documentation",
         author,
-        "thesis_project",
-        "Project thesis_project codebase.",
+        "ecir_project",
+        "Project ecir_project codebase.",
         "Data-Science",
     )
 ]

@@ -1,5 +1,5 @@
-"""thesis-project file for ensuring the package is executable
-as `thesis-project` and `python -m thesis_project`
+"""ecir-project file for ensuring the package is executable
+as `ecir-project` and `python -m ecir_project`
 """
 import importlib
 from pathlib import Path
